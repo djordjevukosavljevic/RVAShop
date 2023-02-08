@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    <tr style="display: none;" class="row-helper">
+        <td>
+            <div class="d-flex px-2 py-1 counter-rows">
+                <div>
+                    <img src="~/img/team--2.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                </div>
+                <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-0 text-sm">@item.Name</h6>
+                    <p class="text-xs text-secondary mb-0">@item.Description</p>
+                </div>
+            </div>
+        </td>
+        <td>
+            <p class="text-xs font-weight-bold mb-0">@item.Price</p>
+        </td>
+        <td class="align-middle text-center text-sm">
+            @if (@item.Active)
+            {
+                <span class="badge badge-sm bg-gradient-success">Active</span>
+            }
+
+            else
+            {
+                <span class="badge badge-sm bg-gradient-secondary">Inactive</span>
+            }
+        </td>
+        <td class="align-middle text-center">
+            <span class="text-secondary text-xs font-weight-bold">@item.DateCreatedAt</span>
+        </td>
+        <td class="align-middle text-center d-flex justify-content-center align-items-center">
+            <a asp-action="Edit" asp-asp-controller="Product" asp-area="Administration" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                Edit
+            </a>
+        </td>
+    </tr>
+}

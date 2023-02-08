@@ -1,0 +1,107 @@
+﻿using AutoMapper;
+using RVAProdavnica.Data;
+using RVAProdavnica.Models;
+using RVAProdavnica.Repositories;
+
+namespace RVAProdavnica.Services
+{
+    public interface IProductService
+    {
+        List<ProductModel> GetAll();
+
+        ProductModel getById(int id);
+
+        List<ProductModel> TableSearch(int pageNumber, int rowsPerPage);
+
+        int? Create(Product obj);
+
+        void Update(Product obj);
+
+        void Delete(Product obj);  
+
+    }
+
+
+    public class ProductService : IProductService
+    {
+        private readonly IProductRepository productRepository;
+
+        private readonly IMapper mapper;
+
+        public ProductService(IProductRepository productRepository, IMapper mapper)
+        {
+            this.productRepository = productRepository;
+            this.mapper = mapper;
+        }
+
+        /// <summary>
+        ///     Create
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public int? Create(Product obj)
+        {
+            return productRepository.Create(obj);
+        }
+
+
+        /// <summary>
+        ///     Read
+        /// </summary>
+        /// <returns></returns>
+        /// 
+        public List<ProductModel> GetAll()
+        {
+            var resultFromDb = productRepository.GetAll();
+            var resultModels = mapper.Map<List<ProductModel>>(resultFromDb);
+            
+            return resultModels;
+        }
+
+        /// <summary>
+        ///     Read by Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns> 
+        public ProductModel getById(int id)
+        {
+            return mapper.Map<ProductModel>(productRepository.GetOne(id));
+        }
+
+        /// <summary>
+        ///     Update
+        /// </summary>
+        /// <param name="obj"></param>
+        public void Update(Product obj)
+        {
+            productRepository.Update(obj);
+        }
+
+
+        /// <summary>
+        ///     Delete
+        /// </summary>
+        /// <param name="obj"></param>
+        public void Delete(Product obj)
+        {
+            productRepository.Delete(obj);
+        }
+
+
+        /// <summary>
+        ///     Table Search 
+        /// </summary>
+        /// <param name="pageNumber"></param>
+        /// <param name="rowsPerPage"></param>
+        /// <param name="conditions"></param>
+        /// <param name="orderBy"></param>
+        /// <returns></returns>
+        public List<ProductModel> TableSearch(int pageNumber, int rowsPerPage)
+        {
+            var resultFromDb = productRepository.TableSearch(pageNumber, rowsPerPage, "", "");
+            var resultModels = mapper.Map<List<ProductModel>>(resultFromDb);
+            
+            return resultModels;
+        }
+    }
+} 
