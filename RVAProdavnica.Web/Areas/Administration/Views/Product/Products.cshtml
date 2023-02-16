@@ -27,7 +27,10 @@
                     </table>
                 </div>
             </div>
-            <button id="load-more" class="btn-outline-secondary w-100">Load More</button>
+            <div class="row d-flex justify-content-center">
+                <button id="load-older" class="btn-outline-secondary w-25 ms-3">Load older</button>
+                <button id="load-more" class="btn-outline-secondary w-25 ms-3">Load more</button>
+            </div>
         </div>
     </div>
 </div>
@@ -35,20 +38,46 @@
 @section Scripts{
     <script src="~/js/ajaxcalls.js"></script>
     <script>
+        var pageNumber = 1;
+        var rowsPerPage = 5;    
         $(document).ready(function () {
                 var url = "/Administration/Product/Rows";
                 var dataObject = $("#product-panel");
-                var pageNumber = 1;
-                var rowsPerPage = 2;
-                var data = { "pageNumber": pageNumber, "rowsPerPage": rowsPerPage }
+                
+                var search = $("#search").val();
+                var data = { "pageNumber": pageNumber, "rowsPerPage": rowsPerPage, "search": search }
+               
                 TableSearch(dataObject, url, data);
 
                 $("#load-more").click(function () {
+                    dataObject.empty();
                     pageNumber++;
-                    data = {"pageNumber": pageNumber, "rowsPerPage": rowsPerPage};  
+                    search = $("#search").val();
+                    data = {"pageNumber": pageNumber, "rowsPerPage": rowsPerPage, "search": search }  
                     TableSearch(dataObject, url, data);
                 });
-                
+
+                $("#load-older").click(function () {
+                    dataObject.empty();
+                    if(pageNumber <= 1){
+                        pageNumber = 1;
+                    } else {
+                        pageNumber--;
+                    }
+                    search = $("#search").val();
+                    data = { "pageNumber": pageNumber, "rowsPerPage": rowsPerPage, "search": search }
+                    TableSearch(dataObject, url, data);
+                });
+
+                $("#search").keyup(function () {
+                    dataObject.empty();
+                    
+                    pageNumber = 1;
+                    search = $("#search").val();
+                    data = { "pageNumber": pageNumber, "rowsPerPage": rowsPerPage, "search": search };
+                    TableSearch(dataObject, url, data);
+                });
+
         });
     </script>
 }

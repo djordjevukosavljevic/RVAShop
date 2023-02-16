@@ -11,7 +11,7 @@ namespace RVAProdavnica.Services
 
         ProductModel getById(int id);
 
-        List<ProductModel> TableSearch(int pageNumber, int rowsPerPage);
+        List<ProductModel> TableSearch(int pageNumber, int rowsPerPage, string search);
 
         int? Create(Product obj);
 
@@ -96,9 +96,14 @@ namespace RVAProdavnica.Services
         /// <param name="conditions"></param>
         /// <param name="orderBy"></param>
         /// <returns></returns>
-        public List<ProductModel> TableSearch(int pageNumber, int rowsPerPage)
+        public List<ProductModel> TableSearch(int pageNumber, int rowsPerPage, string search)
         {
-            var resultFromDb = productRepository.TableSearch(pageNumber, rowsPerPage, "", "");
+            if(rowsPerPage > 100)
+            {
+                rowsPerPage = 100;
+            }
+
+            var resultFromDb = productRepository.TableSearch(pageNumber, rowsPerPage, $"WHERE Name like '%{search}%' or Description like '%{search}%'", "");
             var resultModels = mapper.Map<List<ProductModel>>(resultFromDb);
             
             return resultModels;

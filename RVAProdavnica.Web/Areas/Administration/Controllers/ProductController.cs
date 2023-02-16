@@ -43,9 +43,9 @@ namespace RVAProdavnica.Web.Areas.Administration.Controllers
         /// <param name="pageNumber"></param>
         /// <param name="rowsPerPage"></param>
         /// <returns></returns>
-        public IActionResult Rows(int pageNumber, int rowsPerPage)
+        public IActionResult Rows(int pageNumber, int rowsPerPage, string search)
         {
-            var products = productService.TableSearch(pageNumber, rowsPerPage);
+            var products = productService.TableSearch(pageNumber, rowsPerPage, search);
             return View(products);
         }
     }
