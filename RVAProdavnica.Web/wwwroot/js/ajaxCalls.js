@@ -16,9 +16,8 @@
             } else {
                 $("#load-older").html("No older data...");
                 $("#load-older").prop('disabled', true);
-            }
+                }
 
-                
             if (len < 5) {
                 $("#load-more").html("No more data...");
                 $("#load-more").prop('disabled', true);

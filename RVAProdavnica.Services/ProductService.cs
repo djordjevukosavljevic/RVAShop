@@ -13,7 +13,7 @@ namespace RVAProdavnica.Services
 
         List<ProductModel> TableSearch(int pageNumber, int rowsPerPage, string search);
 
-        int? Create(Product obj);
+        int? Create(ProductModel obj);
 
         void Update(Product obj);
 
@@ -39,9 +39,9 @@ namespace RVAProdavnica.Services
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public int? Create(Product obj)
+        public int? Create(ProductModel obj)
         {
-            return productRepository.Create(obj);
+            return productRepository.Create(mapper.Map<Product>(obj));
         }
 
 

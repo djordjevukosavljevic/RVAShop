@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using RVAProdavnica.Models;
 using RVAProdavnica.Services;
 
 namespace RVAProdavnica.Web.Areas.Administration.Controllers
@@ -35,6 +37,40 @@ namespace RVAProdavnica.Web.Areas.Administration.Controllers
             return View();
         }
         #endregion
+
+
+        /// <summary>
+        ///     Create Method 
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        /// <summary>
+        ///     Create method - POST
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult Create(ProductModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            try 
+            {
+                var result = productService.Create(model);
+                return View(model);
+            } catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return View(model);
+            }
+        }
+
 
 
         /// <summary>

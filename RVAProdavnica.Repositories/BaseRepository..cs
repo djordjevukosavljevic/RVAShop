@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
+using RVAProdavnica.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace RVAProdavnica.Repositories
 {
-    public interface IBaseRepository<TEntity>
+    public interface IBaseRepository<TEntity> where TEntity : Base
     {   
         List<TEntity> GetAll();
 
@@ -23,7 +24,7 @@ namespace RVAProdavnica.Repositories
 
         List<TEntity> TableSearch(int pageNumber, int rowsPerPage, string conditions, string orderBy);
     }
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity>
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity: Base
     {
         private IConfiguration configuration;
         public string connectionString;
@@ -70,6 +71,8 @@ namespace RVAProdavnica.Repositories
         /// <returns></returns>
         public int? Create(TEntity obj)
         {
+            obj.DateCreatedAt = DateTime.Now;
+            obj.DateUpdatedAt = DateTime.Now;
             var result = connection.Insert<TEntity>(obj);
             return result;
         }
@@ -80,6 +83,7 @@ namespace RVAProdavnica.Repositories
         /// <param name="obj"></param>
         public void Update(TEntity obj)
         {
+            obj.DateUpdatedAt = DateTime.Now;
             connection.Update(obj);
         }
 
