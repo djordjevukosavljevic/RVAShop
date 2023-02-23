@@ -15,7 +15,7 @@ namespace RVAProdavnica.Services
 
         int? Create(ProductModel obj);
 
-        void Update(Product obj);
+        void Update(ProductModel obj);
 
         void Delete(Product obj);  
 
@@ -72,9 +72,9 @@ namespace RVAProdavnica.Services
         ///     Update
         /// </summary>
         /// <param name="obj"></param>
-        public void Update(Product obj)
+        public void Update(ProductModel obj)
         {
-            productRepository.Update(obj);
+            productRepository.Update(mapper.Map<Product>(obj));
         }
 
 

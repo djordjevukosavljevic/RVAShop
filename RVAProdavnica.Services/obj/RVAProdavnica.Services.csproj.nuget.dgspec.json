@@ -43,6 +43,10 @@
             "FsCheck": {
               "target": "Package",
               "version": "[2.16.5, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.2.3, )"
             }
           },
           "imports": [
@@ -100,6 +104,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.2.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -175,6 +185,10 @@
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.31, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.2.3, )"
             }
           },
           "imports": [
@@ -243,6 +257,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[12.0.0, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.2.3, )"
             }
           },
           "imports": [

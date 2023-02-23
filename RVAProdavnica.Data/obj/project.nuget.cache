@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "w3THN3wpZw7aiN5gnuM41A22DolCYEWzh4QU76u/RsbFoS/CFInG7XeNrqCv1ApAHYIRO7ETAriqeNifaTpGWg==",
+  "dgSpecHash": "P5SOSZ3S3f2zwuVBf7Abe4BRrpJ/oD5oGhkkgZCwjCU/o1JuKp4NGcb/GYlLL+Rq3Kce/Ny+cle7RUplcBR1MA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lenovo\\Documents\\Visual Studio 2022 - Projects\\RVAShop\\RVAProdavnica.Data\\RVAProdavnica.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\bootstrap\\5.2.3\\bootstrap.5.2.3.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\fscheck\\2.16.5\\fscheck.2.16.5.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\fsharp.core\\4.2.3\\fsharp.core.4.2.3.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",

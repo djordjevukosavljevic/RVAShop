@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YVK57a4OXOFy54wyD1M+d95sj+xMOo7vFV8+d3S2ZDu2iimEFSWEIbK2y5OKn5BvdDr4s/iBKE7Ce7JOntKBqg==",
+  "dgSpecHash": "aPQigufsUfGqZc0+1WN8IHG9sQ6RvoRTx/3uYInNHOirD0ArdzIYvLz45gW9vFKetKBIRRfVD9Q/LVwdmXqJDw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lenovo\\Documents\\Visual Studio 2022 - Projects\\RVAShop\\RVAProdavnica.Models\\RVAProdavnica.Models.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\bootstrap\\5.2.3\\bootstrap.5.2.3.nupkg.sha512"
+  ],
   "logs": []
 }

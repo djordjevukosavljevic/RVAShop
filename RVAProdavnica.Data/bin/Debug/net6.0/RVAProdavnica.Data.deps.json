@@ -8,12 +8,14 @@
     ".NETCoreApp,Version=v6.0": {
       "RVAProdavnica.Data/1.0.0": {
         "dependencies": {
-          "FsCheck": "2.16.5"
+          "FsCheck": "2.16.5",
+          "bootstrap": "5.2.3"
         },
         "runtime": {
           "RVAProdavnica.Data.dll": {}
         }
       },
+      "bootstrap/5.2.3": {},
       "FsCheck/2.16.5": {
         "dependencies": {
           "FSharp.Core": "4.2.3"
@@ -593,6 +595,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "bootstrap/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tZZrH4HdqBr/oeUlGoc2KliYlwXeN3qyhKgc1B5dc585+lnMkcD4A5yIX2NmNoXCCagQQiQGKn7A97sWoo2AOw==",
+      "path": "bootstrap/5.2.3",
+      "hashPath": "bootstrap.5.2.3.nupkg.sha512"
     },
     "FsCheck/2.16.5": {
       "type": "package",

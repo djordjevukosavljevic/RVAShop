@@ -12,11 +12,12 @@
             <div class="card z-index-0 fadeIn3 fadeInBottom">
                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                     <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                        <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Create product</h4>
+                        <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Edit product - @Model.Name</h4>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form asp-action="Create">
+                    <form asp-action="Edit">
+                        <input type="hidden" asp-for="Id" />
                         <div class="input-group input-group-outline my-3">
                             <label asp-for="Name" class="form-label"></label>
                             <input asp-for="Name" class="form-control w-100">
@@ -77,20 +78,20 @@
     }
     else
     {   <div class="position-fixed bottom-1 end-1 z-index-2">
-        <div class="toast fade p-2 mt-2 bg-white show" role="alert" aria-live="assertive" id="dangerToast" aria-atomic="true">
-            <div class="toast-header border-0">
-                <i class="material-icons text-danger me-2">
-                    campaign
-                </i>
-                <span class="me-auto text-gradient text-danger font-weight-bold">RVAPRODAVNICA </span>
-                <small class="text-body">11 mins ago</small>
-                <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close" aria-hidden="true"></i>
+            <div class="toast fade p-2 mt-2 bg-white show" role="alert" aria-live="assertive" id="dangerToast" aria-atomic="true">
+                <div class="toast-header border-0">
+                    <i class="material-icons text-danger me-2">
+                        campaign
+                    </i>
+                    <span class="me-auto text-gradient text-danger font-weight-bold">RVAPRODAVNICA </span>
+                    <small class="text-body">11 mins ago</small>
+                    <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close" aria-hidden="true"></i>
+                </div>
+                <hr class="horizontal dark m-0">
+                <div class="toast-body">
+                    @TempData["ResponseMessage"]
+                </div>
             </div>
-            <hr class="horizontal dark m-0">
-            <div class="toast-body">
-                @TempData["ResponseMessage"]
-            </div>
-        </div>
         </div>
     }
 }   

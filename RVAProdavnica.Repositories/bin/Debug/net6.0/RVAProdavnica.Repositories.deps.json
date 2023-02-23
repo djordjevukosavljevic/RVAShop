@@ -12,12 +12,14 @@
           "Dapper.SimpleCRUD": "2.3.0",
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
           "MySql.Data": "8.0.31",
-          "RVAProdavnica.Data": "1.0.0"
+          "RVAProdavnica.Data": "1.0.0",
+          "bootstrap": "5.2.3"
         },
         "runtime": {
           "RVAProdavnica.Repositories.dll": {}
         }
       },
+      "bootstrap/5.2.3": {},
       "Dapper/2.0.123": {
         "runtime": {
           "lib/net5.0/Dapper.dll": {
@@ -825,7 +827,8 @@
       },
       "RVAProdavnica.Data/1.0.0": {
         "dependencies": {
-          "FsCheck": "2.16.5"
+          "FsCheck": "2.16.5",
+          "bootstrap": "5.2.3"
         },
         "runtime": {
           "RVAProdavnica.Data.dll": {}
@@ -838,6 +841,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "bootstrap/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tZZrH4HdqBr/oeUlGoc2KliYlwXeN3qyhKgc1B5dc585+lnMkcD4A5yIX2NmNoXCCagQQiQGKn7A97sWoo2AOw==",
+      "path": "bootstrap/5.2.3",
+      "hashPath": "bootstrap.5.2.3.nupkg.sha512"
     },
     "Dapper/2.0.123": {
       "type": "package",

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "osFj3UsnoN6SIBbioSbwmMhQtWZz66c6b7J2yuW2qmntlY9XWEySjvxnylMtXTOwZy0PKwTRSO73h9A8zPZR7g==",
+  "dgSpecHash": "ghzN5FuU//GxCCPzx5i4BT457Y3ssETgQuE7HepAGZ7DG/Mrkrn4Q9RoszkezdaZdmB79djDZkbKkGVW7jdF8w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lenovo\\Documents\\Visual Studio 2022 - Projects\\RVAShop\\RVAProdavnica.Web\\RVAProdavnica.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\bootstrap\\5.2.3\\bootstrap.5.2.3.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\dapper.simplecrud\\2.3.0\\dapper.simplecrud.2.3.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\fscheck\\2.16.5\\fscheck.2.16.5.nupkg.sha512",
