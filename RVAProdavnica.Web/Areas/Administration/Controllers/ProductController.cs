@@ -111,7 +111,7 @@ namespace RVAProdavnica.Web.Areas.Administration.Controllers
             if (!ModelState.IsValid)
             {
                 TempData["Response"] = false;
-                TempData["ResponseMessage"] = "Neuspesno kreiranje!";
+                TempData["ResponseMessage"] = "Neuspesno promenjeno!";
 
                 return View(model);
             }
@@ -120,14 +120,14 @@ namespace RVAProdavnica.Web.Areas.Administration.Controllers
                 productService.Update(model);
 
                 TempData["Response"] = true;
-                TempData["ResponseMessage"] = "Uspesno kreirano!";
+                TempData["ResponseMessage"] = "Uspesno promenjeno!";
                 
                 return View(model);
             }
             catch (Exception ex)
             {
                 TempData["Response"] = false;
-                TempData["ResponseMessage"] = "Neuspesno kreirano!";
+                TempData["ResponseMessage"] = "Neuspesno promenjeno!";
                 Console.WriteLine(ex.Message);
                 return View(model);
             }
