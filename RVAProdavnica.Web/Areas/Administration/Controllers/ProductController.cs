@@ -127,7 +127,7 @@ namespace RVAProdavnica.Web.Areas.Administration.Controllers
             catch (Exception ex)
             {
                 TempData["Response"] = false;
-                TempData["ResponseMessage"] = "Neuspesno promenjeno!";
+                TempData["ResponseMessage"] = "Neuspesno kreirano!";
                 Console.WriteLine(ex.Message);
                 return View(model);
             }

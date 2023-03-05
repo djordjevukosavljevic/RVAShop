@@ -23,7 +23,6 @@ namespace RVAProdavnica.Web.Controllers
             var result = productService.GetAll();
 
             return View();
-        
         }
 
         public IActionResult Privacy()
@@ -36,5 +35,6 @@ namespace RVAProdavnica.Web.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }
