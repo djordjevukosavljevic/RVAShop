@@ -1,6 +1,7 @@
 # My first complete Web Application.
 
-Welcome page: 
+Welcome page:
+
 <img width="892" alt="image" src="https://user-images.githubusercontent.com/106562547/224752592-3addc5c5-e340-45ce-818b-55f5bec8790e.png">
 
 Products page:
@@ -21,4 +22,4 @@ Notification after creating products:
 
 <img width="291" alt="image" src="https://user-images.githubusercontent.com/106562547/224766836-098b2550-5ea9-43d2-92e6-1e7b92ada3eb.png">
 
-Also, editing(update) of products are avaliable, currently working on creating users.
+Also, editing(update) of products is enabled, currently working on creating users.
