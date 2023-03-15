@@ -21,7 +21,6 @@ namespace RVAProdavnica.Services
 
     }
 
-
     public class ProductService : IProductService
     {
         private readonly IProductRepository productRepository;

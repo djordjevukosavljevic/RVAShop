@@ -133,8 +133,6 @@ namespace RVAProdavnica.Web.Areas.Administration.Controllers
             }
         }
 
-
-
         /// <summary>
         ///     Rows for products
         /// </summary>
