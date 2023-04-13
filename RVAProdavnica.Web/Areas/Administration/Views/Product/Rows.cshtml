@@ -33,8 +33,11 @@
         <td class="align-middle text-center">
             <span class="text-secondary text-xs font-weight-bold">@item.DateCreatedAt</span>
         </td>
+        <td class="align-middle text-center">
+            <span class="text-secondary text-xs mb-4">Add to cart</span>
+        </td>
         <td class="align-middle text-center d-flex justify-content-center align-items-center">
-            <a asp-action="Edit" asp-asp-controller="Product" asp-area="Administration" asp-route-id="@item.Id" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+            <a asp-action="Edit" asp-controller="Product" asp-area="Administration" asp-route-id="@item.Id" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                 Edit
             </a>
         </td>

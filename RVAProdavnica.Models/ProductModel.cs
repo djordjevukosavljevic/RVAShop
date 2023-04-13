@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RVAProdavnica.Models
 {
-    public class ProductModel
+    public class ProductModel 
     {
         public int Id { get; set; }
 

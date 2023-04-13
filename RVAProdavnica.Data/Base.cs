@@ -21,6 +21,5 @@ namespace RVAProdavnica.Data
         [Column("active")]
         public bool Active { get; set; }
 
-
     }
 }

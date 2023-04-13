@@ -89,7 +89,6 @@ namespace RVAProdavnica.Web.Areas.Administration.Controllers
             }
         }
 
-
         /// <summary>
         ///     Edit Method 
         /// </summary>

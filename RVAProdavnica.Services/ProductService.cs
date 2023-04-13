@@ -10,7 +10,7 @@ namespace RVAProdavnica.Services
         List<ProductModel> GetAll();
 
         ProductModel getById(int id);
-
+          
         List<ProductModel> TableSearch(int pageNumber, int rowsPerPage, string search);
 
         int? Create(ProductModel obj);
@@ -43,7 +43,6 @@ namespace RVAProdavnica.Services
             return productRepository.Create(mapper.Map<Product>(obj));
         }
 
-
         /// <summary>
         ///     Read
         /// </summary>
@@ -56,7 +55,7 @@ namespace RVAProdavnica.Services
             
             return resultModels;
         }
-
+        
         /// <summary>
         ///     Read by Id
         /// </summary>
@@ -76,7 +75,6 @@ namespace RVAProdavnica.Services
             productRepository.Update(mapper.Map<Product>(obj));
         }
 
-
         /// <summary>
         ///     Delete
         /// </summary>
@@ -85,7 +83,6 @@ namespace RVAProdavnica.Services
         {
             productRepository.Delete(obj);
         }
-
 
         /// <summary>
         ///     Table Search 
@@ -107,5 +104,6 @@ namespace RVAProdavnica.Services
             
             return resultModels;
         }
+    
     }
 } 
