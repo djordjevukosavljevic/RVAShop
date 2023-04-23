@@ -143,5 +143,6 @@ namespace RVAProdavnica.Web.Areas.Administration.Controllers
             var products = productService.TableSearch(pageNumber, rowsPerPage, search);
             return View(products);
         }
+        
     }
 }

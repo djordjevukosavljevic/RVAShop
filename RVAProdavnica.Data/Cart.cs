@@ -23,17 +23,15 @@ namespace RVAProdavnica.Data
 
         public Cart()
         {
-
-
+            
         }
 
         public Cart(int productID, string productName, int quantity, double price, double total)
         {
             productID = ProductID;
             productName = ProductName;
-            quantity = Quantity;
+            quantity = 1;
             price = Price;
-            total = Total;
         }
     }
 }
