@@ -8,7 +8,6 @@ namespace RVAProdavnica.Data
 {
     public class Cart
     {
-        public int ProductID { get; private set; }
         
         public string ProductName { get;private set; }
 
@@ -26,9 +25,8 @@ namespace RVAProdavnica.Data
             
         }
 
-        public Cart(int productID, string productName, int quantity, double price, double total)
+        public Cart(string productName, int quantity, double price, double total)
         {
-            productID = ProductID;
             productName = ProductName;
             quantity = 1;
             price = Price;
