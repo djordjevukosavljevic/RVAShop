@@ -8,7 +8,7 @@ namespace RVAProdavnica.Data
 {
     public class UserRole : Base
     {
- 
+        
 
     }
 }

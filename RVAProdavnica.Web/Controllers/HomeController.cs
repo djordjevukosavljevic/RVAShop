@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RVAProdavnica.Data;
+using RVAProdavnica.Models;
 using RVAProdavnica.Repositories;
 using RVAProdavnica.Services;
 using RVAProdavnica.Web.Models;
@@ -11,6 +12,7 @@ namespace RVAProdavnica.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IProductService productService;
+        //private readonly IUserService userService;
 
         public HomeController(ILogger<HomeController> logger,  IProductService productService)
         {
@@ -21,20 +23,17 @@ namespace RVAProdavnica.Web.Controllers
         public IActionResult Index()
         {
             var result = productService.GetAll();
-
-            return View();
+            return View(result);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Cart()
         {
             return View();
         }
-            
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
 
+        public IActionResult Car()
+        {
+            return View();
+        }
     }
 }

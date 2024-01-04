@@ -15,7 +15,7 @@ namespace RVAProdavnica.Repositories
     {
         public OrderRepository(IConfiguration configuration) : base(configuration)
         {
-
+            
         }
     }
 }

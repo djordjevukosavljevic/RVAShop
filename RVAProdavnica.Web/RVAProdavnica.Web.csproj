@@ -9,6 +9,15 @@
 
   <ItemGroup>
     <Content Remove="Web.config" />
+    <Content Remove="wwwroot\js\cart.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\cart.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\cart.js" />
   </ItemGroup>
 
   <ItemGroup>

@@ -4259,6 +4259,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "FsCheck": "2.16.5",
+          "Microsoft.EntityFrameworkCore": "6.0.11",
           "bootstrap": "5.2.3"
         },
         "compile": {
@@ -11876,7 +11877,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

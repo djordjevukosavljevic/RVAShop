@@ -13,7 +13,6 @@ C:\Users\Lenovo\Documents\Visual Studio 2022 - Projects\RVAProdavnica\RVAProdavn
 C:\Users\Lenovo\Documents\Visual Studio 2022 - Projects\RVAShop\RVAProdavnica.Models\bin\Debug\net6.0\RVAProdavnica.Models.deps.json
 C:\Users\Lenovo\Documents\Visual Studio 2022 - Projects\RVAShop\RVAProdavnica.Models\bin\Debug\net6.0\RVAProdavnica.Models.dll
 C:\Users\Lenovo\Documents\Visual Studio 2022 - Projects\RVAShop\RVAProdavnica.Models\bin\Debug\net6.0\RVAProdavnica.Models.pdb
-C:\Users\Lenovo\Documents\Visual Studio 2022 - Projects\RVAShop\RVAProdavnica.Models\obj\Debug\net6.0\RVAProdavnica.Models.csproj.AssemblyReference.cache
 C:\Users\Lenovo\Documents\Visual Studio 2022 - Projects\RVAShop\RVAProdavnica.Models\obj\Debug\net6.0\RVAProdavnica.Models.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Lenovo\Documents\Visual Studio 2022 - Projects\RVAShop\RVAProdavnica.Models\obj\Debug\net6.0\RVAProdavnica.Models.AssemblyInfoInputs.cache
 C:\Users\Lenovo\Documents\Visual Studio 2022 - Projects\RVAShop\RVAProdavnica.Models\obj\Debug\net6.0\RVAProdavnica.Models.AssemblyInfo.cs

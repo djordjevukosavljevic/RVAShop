@@ -52,7 +52,7 @@ namespace RVAProdavnica.Services
         {
             var resultFromDb = productRepository.GetAll();
             var resultModels = mapper.Map<List<ProductModel>>(resultFromDb);
-            
+                
             return resultModels;
         }
         
@@ -76,7 +76,7 @@ namespace RVAProdavnica.Services
         }
 
         /// <summary>
-        ///     Delete
+        ///         Delete
         /// </summary>
         /// <param name="obj"></param>
         public void Delete(Product obj)

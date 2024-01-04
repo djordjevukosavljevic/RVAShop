@@ -4,6 +4,7 @@
         url: url,
         data: data,
         success: function (response) {
+            console.log("Test 123");
             var len = $(response).find('.counter-rows').length;
             if (len != null && len > 0) {
                 dataObject.append(response);

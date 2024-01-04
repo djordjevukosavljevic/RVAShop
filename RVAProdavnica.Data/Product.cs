@@ -18,7 +18,10 @@ namespace RVAProdavnica.Data
         public string Description { get; set; }
 
         [Column("price")]
-        public double Price { get; set; }  
+        public double Price { get; set; }
+
+
+       
 
     }
 }

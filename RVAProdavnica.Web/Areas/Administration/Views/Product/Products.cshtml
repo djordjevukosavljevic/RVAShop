@@ -2,12 +2,13 @@
     ViewData["Title"] = "Products";
 }
 
+<h1>@ViewData["Title"]</h1>
+
 <div class="row">
     <div class="col-12">
         <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                    <h6 class="text-white text-capitalize ps-3">Products</h6>
+                <div class="bg-gradient-secondary shadow-secondary eborder-radius-lg pt-4 pb-3">
                     <a asp-action="Create" class="btn btn-outline-light">Create product</a>
                 </div>
             </div>
@@ -29,8 +30,8 @@
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
-                <button id="load-older" class="btn-outline-secondary w-25 ms-3">Load older</button>
-                <button id="load-more" class="btn-outline-secondary w-25 ms-3">Load more</button>
+                <button id="load-older" class="nav-link text-white active bg-gradient-secondary w-25 ms-3">Load previous page</button>
+                <button id="load-more" class="nav-link text-white active bg-gradient-secondary w-25 ms-3">Load next page</button>
             </div>
         </div>
     </div>
@@ -44,10 +45,8 @@
         $(document).ready(function () {
                 var url = "/Administration/Product/Rows";
                 var dataObject = $("#product-panel");
-                
                 var search = $("#search").val();
                 var data = { "pageNumber": pageNumber, "rowsPerPage": rowsPerPage, "search": search }
-               
                 TableSearch(dataObject, url, data);
 
                 $("#load-more").click(function () {

@@ -36,7 +36,6 @@ namespace RVAProdavnica.Repositories
             this.configuration = configuration;
             connectionString = configuration.GetConnectionString("DefaultConnection");
             connection = new MySqlConnection(connectionString);
-
         }
 
         /// <summary>
@@ -44,13 +43,12 @@ namespace RVAProdavnica.Repositories
         /// </summary>
         /// <returns></returns>
         /// 
-        
+         
         public List<TEntity> GetAll()
         {
             var results = connection.GetList<TEntity>().ToList();
             
             return results;
-            
         }
 
         /// <summary>
@@ -108,6 +106,6 @@ namespace RVAProdavnica.Repositories
         {
             return connection.GetListPaged<TEntity>(pageNumber, rowsPerPage, conditions, orderBy).ToList();
         }
-
+        
     }
 }

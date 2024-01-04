@@ -4,6 +4,6 @@ namespace RVAProdavnica.Web.Controllers
 {
     public class BaseController : Controller 
     {
-
+        
     }
 }
