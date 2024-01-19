@@ -8,8 +8,8 @@
     <div class="col-12">
         <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                <div class="bg-gradient-secondary shadow-secondary eborder-radius-lg pt-4 pb-3">
-                    <a asp-action="Create" class="btn btn-outline-light">Create product</a>
+                <div class="bg-gradient-dark border-radius-lg pt-4 pb-3">
+                    <a asp-action="Create" class="text-white text-center me-2 d-flex align-items-center justify-content-center">Add new product</a>
                 </div>
             </div>
             <div class="card-body px-0 pb-2">
@@ -20,7 +20,7 @@
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Price</th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Data Created</th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Date Created</th>
                                 <th class="text-secondary opacity-7 d-flex justify-content-center align-items">Options</th>
                             </tr>
                         </thead>
@@ -41,7 +41,7 @@
     <script src="~/js/ajaxcalls.js"></script>
     <script>
         var pageNumber = 1;
-        var rowsPerPage = 8;    
+        var rowsPerPage = 6;    
         $(document).ready(function () {
                 var url = "/Administration/Product/Rows";
                 var dataObject = $("#product-panel");

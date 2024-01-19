@@ -11,18 +11,15 @@ namespace RVAProdavnica.Data
     [Table("users")]
     public class User : Base
     {
-        
         [Column("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
         [Column("surrname")]
-        public string Lastname { get; set; }
+        public string? Lastname { get; set; }
         [Column("email")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
         [Column("password")]
-        public string Password { get; set; }
+        public string? Password { get; set; }
 
-        
-        
     }
 
 }

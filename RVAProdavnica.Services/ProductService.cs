@@ -10,6 +10,8 @@ namespace RVAProdavnica.Services
         List<ProductModel> GetAll();
 
         ProductModel getById(int id);
+
+        ProductModel getByPrice(double Price);
           
         List<ProductModel> TableSearch(int pageNumber, int rowsPerPage, string search);
 
@@ -52,7 +54,6 @@ namespace RVAProdavnica.Services
         {
             var resultFromDb = productRepository.GetAll();
             var resultModels = mapper.Map<List<ProductModel>>(resultFromDb);
-                
             return resultModels;
         }
         
@@ -104,6 +105,10 @@ namespace RVAProdavnica.Services
             
             return resultModels;
         }
-    
+
+        public ProductModel getByPrice(double Price)
+        {
+            return mapper.Map<ProductModel>(productRepository.GetByPrice(Price));
+        }
     }
 } 

@@ -16,6 +16,8 @@ namespace RVAProdavnica.Repositories
 
         TEntity GetOne(int id);
 
+        TEntity GetByPrice(double Price);
+
         int? Create(TEntity obj);
 
         void Update(TEntity obj);
@@ -106,6 +108,12 @@ namespace RVAProdavnica.Repositories
         {
             return connection.GetListPaged<TEntity>(pageNumber, rowsPerPage, conditions, orderBy).ToList();
         }
-        
+
+        public TEntity GetByPrice(double Price)
+        {
+            var result = connection.Get<TEntity>(Price);
+
+            return result;
+        }
     }
 }
