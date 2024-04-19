@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Cart items";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<add name="JavaScriptHandler"
+     path="~/js/cart.js"
+     verb="*"
+     preCondition="integratedMode"
+     type="System.Web.StaticFileHandler" />
+
+@section Scripts{
+    <script src="~/js/cart.js"></script>
+}   
+            <p><strong>
+            Use this page to see your payment and cart informations.<br />
+            If you need any aditional support contact zorzezorz,
+            his contact info is in footer.
+            </strong></p>
+
+<div>
+    <label>
+        <button id="submitButton" type="submit" src="script" class="nav-link text-white active bg-gradient-secondary" style="width: 60px">Pay</button>
+    </label>
+    <div>
+        <label for="masterBtn" class="mb-0 text-sm" >Mastercard</label>
+        <input type="radio" name="card" id="masterCard">
+        <label for="visaBtn" class="mb-0 text-sm">Visa</label>
+        <input type="radio" name="card" id="visaCard">
+        <label for="paypalBtn" class="mb-0 text-sm">PayPal</label>
+        <input type="radio" name="card" id="paypalCard"><br/>
+        <label>
+            <p1>Your card number:</p1>
+        </label><br/>
+        <input type="text" class="form-control" id="cardNum" style="border: solid; border-width: thin; width: 440px" placeholder=" Your card number"/>
+        <button type="submit" id="verifyBtn" class="form-control" style="border: solid; border-width: thin; width: 60px">Verify</button>
+    </div>
+</div>
+
+
