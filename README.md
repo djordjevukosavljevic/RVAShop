@@ -21,3 +21,6 @@ This project is an online shop application built using ASP.NET Core 6.0 MVC. It 
 - .NET 6.0 SDK: [Download here](https://dotnet.microsoft.com/download/dotnet/6.0)
 - Microsoft SQL Server: [Download here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - Visual Studio 2022 or later: [Download here](https://visualstudio.microsoft.com/vs/)
+
+
+To be continuded.
